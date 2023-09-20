@@ -12,7 +12,6 @@ type IMainProps = {
 
 const Main = (props: IMainProps) => (
   <div className="overflow-hidden relative">
-    
     <Navbar />
     {props.meta}
     <main className="">{props.children}</main>
