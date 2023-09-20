@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.center-all {
+    justify-content: "center";
+    align-items: "center"
+}
