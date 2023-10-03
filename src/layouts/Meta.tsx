@@ -16,6 +16,7 @@ const Meta = (props: IMetaProps) => {
   return (
     <>
       <Head>
+      
         <meta charSet="UTF-8" key="charset" />
         <meta
           name="viewport"
