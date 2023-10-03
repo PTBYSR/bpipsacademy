@@ -11,8 +11,8 @@ import Button from "@/components/ui/Button/Button";
 import { services } from "../../db/Services/services";
 import Card from "@/components/common/Card/Card";
 import Testimonial from "@/components/interface/Testimonial/Testimonial";
-import three from "../../public/bootcamp.jpg";
-import boot from "../../public/3days.jpg";
+import three from "../../public/hunt-xs.jpeg";
+import boot from "../../public/boot-xs.jpg";
 import BlogCard from "@/components/common/BlogCard/BlogCard";
 import Banner from "@/components/common/Banner/Banner";
 
