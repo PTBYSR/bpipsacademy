@@ -49,7 +49,7 @@ const Footer = () => {
             {
               socials.map((x, index) => (
 
-                <li key={x.id} className="text-white w-[25px] flex gap-2 items-center text-opacity-90"><Image src={x.img} alt="" /> <div className=" font-inter">{x.title}</div></li>
+                <li key={x.id} className="text-white w-[25px] flex gap-2 items-center text-opacity-70"><Image src={x.img} alt="" /> <div className=" font-inter">{x.title}</div></li>
               ))
             }
           </ul>
@@ -57,9 +57,9 @@ const Footer = () => {
         <div>
           <div className="text-white text-xl font-prompt  uppercase font-bold">Contact us</div>
           <ul className="mt-5 flex flex-col gap-3">
-            <li className="text-white w-[30px] flex gap-2 items-center text-opacity-90">07066499537</li>
-            <li className="text-white w-[30px] flex gap-2 items-center text-opacity-90">07066499537</li>
-            <li className="text-white w-[30px] flex gap-2 items-center text-opacity-90">bpips@forex.com</li>
+            <li className="text-white w-[30px] flex gap-2 items-center text-opacity-70">07066499537</li>
+            <li className="text-white w-[30px] flex gap-2 items-center text-opacity-70">07066499537</li>
+            <li className="text-white w-[30px] flex gap-2 items-center text-opacity-70">bpips@forex.com</li>
           </ul>
         </div>
         <div>
@@ -68,7 +68,7 @@ const Footer = () => {
             {
               navLinks.map((x,index) => (
                 
-                <li key={x.id} className="text-white w-[30px] flex gap-2 items-center text-opacity-90"> <div className=" font-inter">{x.title}</div></li>
+                <li key={x.id} className="text-white w-[30px] flex gap-2 items-center text-opacity-70"> <div className=" font-inter">{x.title}</div></li>
               ))
             }
             <li></li>
@@ -81,8 +81,8 @@ const Footer = () => {
         </div>
         <div className="flex md:flex-row flex-col md:justify-between">
 
-          <div className="text-white text-opacity-60 mt-3">©Copyright Bpips Academy 2023. All rights reserved.</div>
-          <div className="text-white text-opacity-60 mt-3">Designed and built by <Link className="underline"  href="">GreatWhite</Link></div>
+          <div className="text-white md:text-sm text-xs text-opacity-60 mt-3">©Copyright Bpips Academy 2023. All rights reserved.</div>
+          <div className="text-white  md:text-sm text-xs text-opacity-60 mt-3">Designed and built by <Link className="underline"  href="">GreatWhite</Link></div>
         </div>
       </div>
     </footer>

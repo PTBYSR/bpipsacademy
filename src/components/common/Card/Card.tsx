@@ -34,8 +34,8 @@ const Card = ({ label, title, body, buttonText, id, img, className }: any) => {
             ? body
             : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quaerat! Ducimus facere dolore veritatis alias debitis itaque placeat in est!"}
         </div>
-        <div className="flex center-all w-full">
-          <Button>{buttonText ? buttonText : "get started"}</Button>
+        <div className=" flex justify-center ">
+          <Button className="">{buttonText ? buttonText : "get started"}</Button>
         </div>
       </div>
       <div className="md:w-1/2 overflow-hidden flex justify-center items-center">

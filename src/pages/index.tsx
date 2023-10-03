@@ -41,7 +41,7 @@ export default function Home() {
         />
       }
     >
-      <header className="px-5 bg-violet h-[800px] flex flex-col justify-center items-center gap-10 relative overflow-hidden">
+      <header className=" px-5 bg-violet h-[800px] flex flex-col justify-center items-center gap-10 relative overflow-hidden">
         {/* <div className=" z-[100] absolute left-0 -bottom-[210px]"><Image src={money} alt=""/></div> */}
         <div className=" z-[10] absolute left-0 top-0">
           <Image src={green} alt="" />
@@ -86,7 +86,7 @@ export default function Home() {
             Our Services
           </div>
         </div>
-        <div className="mt-10">
+        <div className="md:mt-10">
           {services.map((x) => (
             <Card
               id={x.id}
