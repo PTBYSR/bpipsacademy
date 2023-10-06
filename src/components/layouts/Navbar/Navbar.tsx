@@ -35,7 +35,7 @@ const Navbar = () => {
         )}
       >
         {navLinks.map((x) => (
-          <Link key={x.id} href={"/"}>
+          <Link key={x.id} href={x.href}>
             <li
               className="bg-white text-center py-6 md:border-b-0 border-b border-opacity-75 uppercase text-xs font-semibold tracking-[1px] font-inter"
               key={x.id}
@@ -52,7 +52,7 @@ const Navbar = () => {
       <div className="hidden md:flex gap-10 items-center">
         <ul className="flex gap-10 ">
           {navLinks.map((x) => (
-            <Link key={x.id} href={"/"}>
+            <Link key={x.id} href={x.href}>
               <li className="uppercase text-xs font-semibold tracking-[1px] font-inter">
                 {x.title}
               </li>

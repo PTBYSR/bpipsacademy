@@ -13,38 +13,39 @@ export const services = [
         // icon: ( <Trainer fill="#624C7B" w="17"/>),
         href: "/services#mentorship",
         title: "Forex Mentorship",
-        body: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspern",
+        body: "Online & Physical training sessions",
 
     },
     
+   
     {
         id: 2,
-        label: "classes",
-        img: fight,
-        // icon: (<Boxing fill="#624C7B" w="22"/>),
-        href: "/services#classes",
-        title: "Physical Classes",
-        body: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspern",
+        label: "guidance from our Pros",
+        img: trump,
+        // icon: (<Running fill="#624C7B" w="25"/>),
+        href: "/services#acount",
+        title: "Account Management",
+        body: "Private trading of funds for business owners, students and working class by our PRO traders and robot",
 
     },
     {
         id: 3,
-        label: "signals",
-        img: trump,
-        // icon: (<Running fill="#624C7B" w="25"/>),
-        href: "/services#signals",
-        title: "VIP signals",
-        body: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspern",
-
-    },
-    {
-        id: 4,
         label: "prop firm",
         img: farm,
         // icon: (<Boxing fill="#624C7B" w="22"/>),
         href: "/services#propfirm",
-        title: "Prop Firm trading",
-        body: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspern",
+        title: "prop firm services",
+        body: "Management of prop firm accounts and provision of returns (profits). Learn more about our VIP signals and Events & Programs coaching",
+
+    },
+    {
+        id: 4,
+        label: "metro",
+        img: fight,
+        // icon: (<Boxing fill="#624C7B" w="22"/>),
+        href: "/services#propfirm",
+        title: "Metro Trading Bot",
+        body: "Are you tired of sleepless nights, hitting drawdowns, blowing accounts, losing ridiculous amount of money? Then the B'pips academy METRO trading bot is for you",
 
     },
 ]

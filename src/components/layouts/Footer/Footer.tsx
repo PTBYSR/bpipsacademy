@@ -37,7 +37,7 @@ const socials = [
 
 const Footer = () => {
   return (
-    <footer className="bg-violet py-20 md:px-20 px-5">
+    <footer className="bg-green py-20 md:px-20 px-5">
       <div className="flex flex-col md:flex-row justify-between md:gap-0 gap-14">
         <div>
           <div className="text-white text-xl font-prompt  uppercase font-bold">
@@ -82,7 +82,7 @@ const Footer = () => {
         <div className="flex md:flex-row flex-col md:justify-between">
 
           <div className="text-white md:text-sm text-xs text-opacity-60 mt-3">©Copyright Bpips Academy 2023. All rights reserved.</div>
-          <div className="text-white  md:text-sm text-xs text-opacity-60 mt-3">Designed and built by <Link className="underline"  href="">GreatWhite</Link></div>
+          <div className="text-white  md:text-sm text-xs text-opacity-60 mt-3">Designed and built by <Link className="underline"  href="">Pase Digital</Link></div>
         </div>
       </div>
     </footer>

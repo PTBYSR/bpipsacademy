@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 
 
-const BlogCard = ({img, title, id, date}:any) => {
+const BlogCard = ({img, title, id, date, description, href}:any) => {
   return (
     <div className="flex flex-col w-full md:w-[370px] border-white border-opacity-60 border">
       <div className="h-[275px] w-full overflow-hidden relative">
@@ -22,12 +22,11 @@ const BlogCard = ({img, title, id, date}:any) => {
             {title}
           </div>
         </div>
-        <div className="text-sm opacity-60 text-white font-inter font-light">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore,
-          quisquam.
+        <div className=" opacity-60 text-white font-inter font-light text-xs">
+          {description}
         </div>
         <div>
-          <Button>learn more</Button>
+          <Button href={href}>learn more</Button>
         </div>
       </div>
     </div>
