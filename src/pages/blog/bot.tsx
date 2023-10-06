@@ -66,10 +66,10 @@ const Blog = () => {
       <div className="w-[100%] md:px-20 py-20">
         <div className="px-5 md:px-0">
           <div className="text-violet ml-2 font-inter uppercase text-xs  opacity-90">
-            B'pips Forex Academy
+            B&apos;pips Forex Academy
           </div>
           <h1 className=" text-violet text-4xl md:text-6xl font-prompt uppercase font-bold leading-[60px] md:leading-[80px]">
-            B'PIPS  <span >trading</span> bot<span className="text-2xl">-</span><div className="ml-2 inline-block text-red
+            B&apos;PIPS  <span >trading</span> bot<span className="text-2xl">-</span><div className="ml-2 inline-block text-red
              text-2xl uppercase pb-3 "> metro</div>
           </h1>
         </div>
