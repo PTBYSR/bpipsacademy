@@ -1,6 +1,8 @@
+import Card from "@/components/common/Card/Card";
 import { Meta } from "@/layouts/Meta";
 import { Main } from "@/templates/Main";
 import React from "react";
+import { services } from "../../../db/Services/services";
 
 const page = () => {
   return (
@@ -22,6 +24,20 @@ const page = () => {
           </h1>
         </div>
       </div>
+
+      <div className="mb-20">
+          {services.map((x) => (
+            <Card
+              id={x.id}
+              title={x.title}
+              body={x.body}
+              key={x.id}
+              label={x.label}
+              img={x.img}
+              href={x.href}
+            />
+          ))}
+        </div>
     </Main>
   );
 };

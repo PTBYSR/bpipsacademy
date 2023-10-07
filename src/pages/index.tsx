@@ -28,7 +28,7 @@ const items = [
   },
   {
     id: 2,
-    href: "",
+    href: "/services",
     description: "",
     title: "Hunt with the beasts 2.0",
     img: three,
@@ -55,6 +55,8 @@ export default function Home() {
         />
       }
     >
+      
+
       <header className=" px-5 bg-green h-[800px] flex flex-col justify-center items-center gap-10 relative overflow-hidden">
         {/* <div className=" z-[100] absolute left-0 -bottom-[210px]"><Image src={money} alt=""/></div> */}
         <div className=" z-[10] absolute left-0 top-0">
@@ -66,7 +68,7 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center gap-5">
           <div className="z-[100] relative ">
             <div className="text-white font-inter uppercase text-xs text-center opacity-90">
-              B'pips Forex Academy
+              B&apos;pips Forex Academy
             </div>
             <h1 className="text-center text-white text-4xl md:text-6xl font-prompt uppercase font-bold leading-[60px] md:leading-[80px]">
               Join the hunt <br />
@@ -91,6 +93,8 @@ export default function Home() {
         </div>
       </header>
 
+      <Testimonial />
+
       <section id="services" className=" bg-green py-20">
         <div>
           <div className="text-white font-inter uppercase text-xs text-center opacity-90">
@@ -109,6 +113,7 @@ export default function Home() {
               key={x.id}
               label={x.label}
               img={x.img}
+              href={x.href}
             />
           ))}
         </div>
@@ -144,8 +149,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <Testimonial />
 
       <section id="news">
         <div className="bg-green px-10 py-20">

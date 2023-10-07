@@ -14,7 +14,7 @@ type IMainProps = {
 const Main = (props: IMainProps) => (
   <div className="overflow-hidden relative">
     <div className="flex justify-center bg-red w-full font-semibold text-white py-2 uppercase text-xs">
-      metro trading bot     </div>
+      metro trading bot <span className="underline font-bold ml-2 "> learn more</span>    </div>
     <Navbar />
     {props.meta}
     <main className="">{props.children}</main>

@@ -9,9 +9,9 @@ export const navLinks = [
         title: "Services",
         href: "/services"
     },
-    {
-        id: 1,
-        title: "Contact",
-        href: "/join"
-    },
+    // {
+    //     id: 1,
+    //     title: "Contact",
+    //     href: "/join"
+    // },
 ]

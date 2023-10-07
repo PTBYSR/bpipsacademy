@@ -16,7 +16,7 @@ const About = () => {
       <div className="h-[250px] md:h-[400px] flex items-center">
         <div className="md:px-20 px-5">
           <div className="text-violet ml-2 font-inter uppercase text-xs  opacity-90">
-            who is B'pips Forex Academy
+            who is B&apos;pips Forex Academy
           </div>
           <h1 className=" text-violet text-4xl md:text-6xl font-prompt uppercase font-bold leading-[60px] md:leading-[80px]">
             About us
@@ -28,10 +28,10 @@ const About = () => {
         <div className="md:px-20 px-5 mt-10">
           <div>
             <div className="text-white text-xl md:text-3xl font-prompt uppercase font-bold leading-[30px] md:leading-[60px]">
-              What is <span className="text-[#b8fff8]">B'PIPS</span>
+              What is <span className="text-[#b8fff8]">B&apos;PIPS</span>
             </div>
             <div className=" font-inter text-white md:w-2/3 mt-2 md:mt-4">
-              B'PIPS stands for Blue Pips ( And the color blue in the financial
+              B&apos;PIPS stands for Blue Pips ( And the color blue in the financial
               market indicates PROFIT ). <br />
               <br />
               We are a team of diversed professional traders ( years of
@@ -45,10 +45,10 @@ const About = () => {
             </div>
           </div>
           <div className="flex md:flex-row flex-col-reverse py-20">
-            <div className="border h-[600px]  md:w-1/2"></div>
+            
 
 
-            <div className="md:w-1/2 mb-10 md:px-10 flex pt-10 flex-col">
+            <div className=" mb-10 md:px-10 flex pt-10 flex-col">
               <div className="text-white text-xl md:text-3xl font-prompt uppercase font-bold leading-[30px] md:leading-[60px]">
                 Our <span className="text-[#b8fff8]">location</span>
               </div>
@@ -59,7 +59,7 @@ const About = () => {
               <div className="text-white text-xl md:text-xl font-prompt uppercase font-bold leading-[30px] md:leading-[60px] mt-10">
                 For more enquiries
               </div>
-              <div className="font-inter text-white md:w-2/3 ">
+              <div className="font-inter text-white md:w-2/3 mt-2">
                 080139699860 <br /> 09013022472 <br />
                 0701849003
               </div>

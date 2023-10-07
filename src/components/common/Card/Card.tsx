@@ -5,12 +5,12 @@ import shield from "../../../../public/shield.png";
 import Image from "next/image";
 import clsx from "clsx";
 
-const Card = ({ label, title, body, buttonText, id, img, className }: any) => {
+const Card = ({ label, title, body, buttonText, id, img, className, href }: any) => {
   return (
     <div
       className={clsx(
         [className],
-        "flex  md:h-[540px] bg-green flex-col-reverse md:flex-row mt-52 md:my-10 px-5 md:px-20",
+        "flex  md:h-[540px] bg-green md:py-0 py-16 flex-col-reverse md:flex-row mt-32 md:my-10 px-5 md:px-20",
         id === 1 && ["md:flex-row-reverse"],
         id === 3 && ["md:flex-row-reverse"]
       )}
@@ -42,7 +42,7 @@ const Card = ({ label, title, body, buttonText, id, img, className }: any) => {
             : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quaerat! Ducimus facere dolore veritatis alias debitis itaque placeat in est!"}
         </div>
         <div className=" flex justify-center  ">
-          <Button className="">
+          <Button className="" href={href}>
             {buttonText ? buttonText : "get started"}
           </Button>
         </div>
