@@ -20,12 +20,12 @@ const testimonials = [
   {
     id: 2,
     img: wild,
-    name: "Michael Ozo",
+    name: "Confidence Joe",
     body: "B'pips academy has been a game-changer for me.I've learned so much about the markets and how to make sound trading decisions.",
   },
   {
     id: 3,
-    name: "Patrick Uchendu",
+    name: "Vibrant Mayor",
     img: corper,
     body: "In the space of three months,i had known the Basics of forex, market structure, technical analysis e.t.c I'm a proud B'pips Academy Student",
   },
