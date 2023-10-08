@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import React from "react";
 import landing from "../../public/landing.jpg";
 import Button from "@/components/ui/Button/Button";
+import Link from "next/link";
 
 type IMainProps = {
   meta: ReactNode;
@@ -14,7 +15,7 @@ type IMainProps = {
 const Main = (props: IMainProps) => (
   <div className="overflow-hidden relative">
     <div className="flex justify-center bg-red w-full font-semibold text-white py-2 uppercase text-xs">
-      metro trading bot <span className="underline font-bold ml-2 "> learn more</span>    </div>
+      metro trading bot <Link href="/blog/bot"><span className="underline font-bold ml-2 "> learn more</span></Link>    </div>
     <Navbar />
     {props.meta}
     <main className="">{props.children}</main>

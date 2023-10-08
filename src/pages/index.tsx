@@ -1,7 +1,8 @@
 import { Main } from "@/templates/Main";
 import { Meta } from "@/layouts/Meta";
-import landing from "../../public/landing-dsk.png";
+import landing from "../../public/new-landing.jpg";
 import landingMb from "../../public/landing-mb.png";
+// import landingMb from "../../public/new-landing.jpg";
 import green from "../../public/big-green.png";
 import red from "../../public/big-red.png";
 import bigLogo from "../../public/B'PIPS-1 4.png";
@@ -16,6 +17,7 @@ import bot from "../../public/bot.jpg";
 import boot from "../../public/boot-xs.jpg";
 import BlogCard from "@/components/common/BlogCard/BlogCard";
 import Banner from "@/components/common/Banner/Banner";
+import Marquee from "react-fast-marquee";
 
 const items = [
   {
@@ -55,8 +57,6 @@ export default function Home() {
         />
       }
     >
-      
-
       <header className=" px-5 bg-green h-[800px] flex flex-col justify-center items-center gap-10 relative overflow-hidden">
         {/* <div className=" z-[100] absolute left-0 -bottom-[210px]"><Image src={money} alt=""/></div> */}
         <div className=" z-[10] absolute left-0 top-0">
@@ -85,15 +85,15 @@ export default function Home() {
         <div className="relative z-[10]">
           <Button>Join the hunt</Button>
         </div>
-        <div className="absolute top-0 hidden md:block">
-          <Image src={landing} alt="" />
+        <div className="absolute top-0 hidden md:block w-screen">
+          <Image src={landing} alt="" layout="" />
         </div>
         <div className="absolute top-0 md:hidden ">
           <Image src={landingMb} alt="" layout="" />
         </div>
       </header>
-
-      <Testimonial />
+     
+        <Testimonial />
 
       <section id="services" className=" bg-green py-20">
         <div>
@@ -132,13 +132,17 @@ export default function Home() {
               </div>
             </div>
             <div className="font-inter md:w-2/3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-              debitis ratione, voluptatum tempora aliquam sapiente repellendus
-              nostrum officia veniam adipisci ipsam eum harum deserunt beatae!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              cumque nisi consectetur maxime molestiae ab, consequatur eaque,
-              iure quae illum, aut maiores eum laudantium distinctio
-              exercitationem. Ipsam aspernatur eos illo.
+            B&apos;PIPS stands for Blue Pips ( And the color blue in the financial
+              market indicates PROFIT ). <br />
+              <br />
+              We are a team of diversed professional traders ( years of
+              experience ) that have scaled through so many hurdles in the
+              financial market and finally resolved to establishing a medium to
+              empower and sustain youngsters and anyone ready to take their
+              financial position to the next level by teaching them the skill
+              set needed, giving them access to vital tools and services that
+              will fuel their growth and monitoring their progress as they
+              evolve
             </div>
             <div className="mt-10">
               <Button href="/about">about us</Button>

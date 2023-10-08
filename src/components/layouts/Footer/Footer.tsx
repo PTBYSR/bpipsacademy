@@ -82,7 +82,7 @@ const Footer = () => {
         <div className="flex md:flex-row flex-col md:justify-between">
 
           <div className="text-white md:text-sm text-xs text-opacity-60 mt-3">©Copyright Bpips Academy 2023. All rights reserved.</div>
-          <div className="text-white  md:text-sm text-xs text-opacity-60 mt-3">Designed and built by <Link className="underline"  href="">Pase Digital</Link></div>
+          <div className="text-white  md:text-sm text-xs text-opacity-60 mt-3">Designed and built by <Link className="underline"  href="https://www.instagram.com/pasedigital.co/" target="__blank">Pase Digital</Link></div>
         </div>
       </div>
     </footer>
