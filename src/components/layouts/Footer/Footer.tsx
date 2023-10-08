@@ -8,6 +8,7 @@ import Link from "next/link";
 import { navLinks } from "../Navbar/Navlinks";
 
 
+
 const socials = [
   {
     id: 1,
@@ -68,7 +69,9 @@ const Footer = () => {
             {
               navLinks.map((x,index) => (
                 
-                <li key={x.id} className="text-white w-[30px] flex gap-2 items-center text-opacity-70"> <div className=" font-inter">{x.title}</div></li>
+                <Link key="" href={x.href}>
+                  <li key={x.id} className="text-white w-[30px] flex gap-2 items-center text-opacity-70"> <div className=" font-inter">{x.title}</div></li>
+                </Link>
               ))
             }
             <li></li>

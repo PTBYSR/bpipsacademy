@@ -1,7 +1,7 @@
 import { Main } from "@/templates/Main";
 import { Meta } from "@/layouts/Meta";
 import landing from "../../public/new-landing.jpg";
-import landingMb from "../../public/landing-mb.png";
+import landingMb from "../../public/new-landing.png";
 // import landingMb from "../../public/new-landing.jpg";
 import green from "../../public/big-green.png";
 import red from "../../public/big-red.png";
@@ -88,8 +88,8 @@ export default function Home() {
         <div className="absolute top-0 hidden md:block w-screen">
           <Image src={landing} alt="" layout="" />
         </div>
-        <div className="absolute top-0 md:hidden ">
-          <Image src={landingMb} alt="" layout="" />
+        <div className="absolute top-0 md:hidden bg-green">
+          <Image src={landingMb} alt="" layout=""  className="opacity-30"/>
         </div>
       </header>
      
