@@ -65,7 +65,7 @@ const AccountManagement = () => {
                 Below is a brief description on what the Prop firm services
                 entails.{" "}
                 <Link href="" className="underline">
-                  To learn more contact your account manager here.
+                  To learn more about any of these packages, contact your account manager here.
                 </Link>
               </div>
               <div className="md:pl-10">
@@ -75,7 +75,7 @@ const AccountManagement = () => {
                       <tr>
                         <th className="py-5 px-4 border-b">Account Type</th>
                         <th className="py-5 px-4 border-b">
-                          Initial Investment
+                        Account Size
                         </th>
                         <th className="py-5 px-4 border-b">Duration</th>
                       </tr>
@@ -84,7 +84,7 @@ const AccountManagement = () => {
                       <tr>
                         <td className="py-5 px-4 border-b">
                           {" "}
-                          $5k prop firm acct
+                          $5k prop firm account
                         </td>
                         <td className="py-5 px-4 border-b"> $5,000</td>
                         <td className="py-5 px-4 border-b"> 2 months</td>
@@ -92,7 +92,7 @@ const AccountManagement = () => {
                       <tr>
                         <td className="py-5 px-4 border-b">
                           {" "}
-                          $10k prop firm acct
+                          $10k prop firm account
                         </td>
                         <td className="py-5 px-4 border-b"> $10,000</td>
                         <td className="py-5 px-4 border-b"> 2 months</td>
@@ -100,7 +100,7 @@ const AccountManagement = () => {
                       <tr>
                         <td className="py-5 px-4 border-b">
                           {" "}
-                          $25k prop firm acct
+                          $25k prop firm account
                         </td>
                         <td className="py-5 px-4 border-b"> $25,000</td>
                         <td className="py-5 px-4 border-b"> 3 months</td>

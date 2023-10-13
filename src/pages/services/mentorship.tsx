@@ -31,18 +31,12 @@ const Services = () => {
       <div className="bg-green pb-20 pt-10">
         <div className="md:px-20 px-5 mt-10">
           <div>
-            <div className="text-white text-xl md:text-3xl font-prompt uppercase font-bold leading-[30px] md:leading-[60px]">
-              What is <span className="text-[#b8fff8]">Forex Mentorship</span>
-            </div>
-            <div className=" font-inter text-white md:w-2/3 mt-2 md:mt-4">
-              
-            </div>
           </div>
 
           <div className="mt-10">
             <div>
               <div className="text-white text-xl md:text-3xl font-prompt uppercase font-bold leading-[30px] md:leading-[60px]">
-                - Investment plan
+                - Mentorship
               </div>
               <div className="md:pl-10 font-inter text-white md:w-2/3 mt-2 md:mt-4 mb-10">
                 The image below is a brief description on what the Investment

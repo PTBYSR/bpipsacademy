@@ -15,23 +15,15 @@ const socials = [
     label: "instagram",
     title: "Instagram",
     icon: "",
-    href: "",
+    href: "https://www.instagram.com/bpipsacademy/",
     img: instagram
   },
   {
     id: 2,
-    label: "twitter",
-    title: "Twitter",
-    icon: "",
-    href: "",
-    img: twitter
-  },
-  {
-    id: 3,
     label: "whatsapp",
     title: "Whatsapp",
     icon: "",
-    href: "",
+    href: "https://wa.link/wjivcd",
     img: whatsapp
   },
 ];

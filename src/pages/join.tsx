@@ -68,7 +68,7 @@ const Join = () => {
         </div>
       </div>
       <div className=" font-inter text-violet md:w-2/3 px-5 mb-10 mt-2">
-        Join us in the hunt and create generational wealth from forex ! Fill in the form and get direct access to our experts now.
+        Sign up now to begin your forex journey with us
       </div>
 
       <form className="w-full px-5">
@@ -121,7 +121,7 @@ const Join = () => {
             onClick={handleSubmit}
             type="submit"
           >
-           Join the hunt
+           Submit
           </button>
         </div>
       </form>
