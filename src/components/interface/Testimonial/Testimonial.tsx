@@ -59,7 +59,7 @@ const Modal = ({ isOpen, imageUrl, reset }:any) => {
   }
 
   return (
-    <div onClick={() => handleClose()} className={`fixed bg-[#000] bg-opacity-30 inset-0  ${ open ? "flex" : "hidden" } justify-center items-center z-50`}>
+    <div onClick={() => handleClose()} className={`hidden fixed bg-[#000] bg-opacity-30 inset-0  ${ open ? "flex" : "hidden" } justify-center items-center z-50`}>
     <div className="modal-overlay" onClick={() => handleClose()}></div>
     <div className="modal-content bg-white p-6 rounded shadow-lg">
       <span
@@ -85,6 +85,9 @@ const Testimonial = () => {
   const handleClick = (index:any, screenshot:any) => {
     setIndex(index)
     setScreenshot(screenshot)
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+  const handleClickMb = (index:any) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
@@ -117,7 +120,7 @@ const Testimonial = () => {
             
             key={x.id}
           >
-            <div className="w-auto md:w-[600px] h-[400px] border-white border border-opacity-60 flex gap-5 py-5 md:p-10 px-4 flex-row md:flex-col-reverse md:items-center md:justify-around">
+            <div className="w-auto md:w-[600px] h-[400px] border-white border border-opacity-60 flex gap-5 py-5 md:p-10 px-4 flex-row md:flex-col-reverse md:items-center md:justify-around md:mr-5">
               <div className="w-2/3 flex flex-col items-center">
                 <div className=" h-[50px] w-[60px]  md:w-[80px] md:h-auto">
                   <Image src={x.img} alt="" layout="fit"/>
@@ -143,7 +146,7 @@ const Testimonial = () => {
       <div className="md:hidden flex justify-center mt-5 gap-5 md:flex-row flex-col md:px-0 px-5 items-center">
         {testimonials.map((x, index) => (
           <div
-            onClick={() => handleClick(index)}
+            onClick={() => handleClickMb(index)}
             
             key={x.id}
           >
