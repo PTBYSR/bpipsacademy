@@ -1,6 +1,6 @@
 import { Main } from "@/templates/Main";
 import { Meta } from "@/layouts/Meta";
-import landing from "../../public/new-landing.jpg";
+import landing from "../../public/jkjk.jpeg";
 import landingMb from "../../public/new-landing.png";
 // import landingMb from "../../public/new-landing.jpg";
 import green from "../../public/big-green.png";
@@ -18,8 +18,8 @@ import boot from "../../public/boot-xs.jpg";
 import BlogCard from "@/components/common/BlogCard/BlogCard";
 import Banner from "@/components/common/Banner/Banner";
 import Marquee from "react-fast-marquee";
-import cert from '../../public/cert.png'
-import React, {useState} from "react";
+import cert from "../../public/cert.png";
+import React, { useState } from "react";
 const items = [
   {
     id: 1,
@@ -48,13 +48,11 @@ const items = [
   },
 ];
 
-
-
-const Modal = ({ isOpen, onClose, children }:any) => {
+const Modal = ({ isOpen, onClose, children }: any) => {
   return (
     <div
       className={`bg-[#000] bg-opacity-30 fixed inset-0 flex items-center justify-center z-50 ${
-        isOpen ? '' : 'hidden'
+        isOpen ? "" : "hidden"
       }`}
     >
       <div className="modal-overlay" onClick={onClose}></div>
@@ -65,9 +63,7 @@ const Modal = ({ isOpen, onClose, children }:any) => {
   );
 };
 
-
 export default function Home() {
-
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {
@@ -105,38 +101,36 @@ export default function Home() {
               with the beasts
             </h1>
           </div>
-          <p className="text-white opacity-90 text-center md:w-1/2 ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-            accusamus enim ex iste sequi molestias eum amet nesciunt nihil iure?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-            modi.
+          <p className="z-[10000] text-white opacity-90 text-center md:w-1/2 ">
+            We&apos;re a diverse team of experienced traders empowering
+            individuals, especially the youth, to boost their financial
+            standing. We provide essential skills, tools, ongoing support, and
+            monitor progress for lasting growth in the financial market.
           </p>
         </div>
         <div className="relative z-[10]">
           <Button>Join the hunt</Button>
         </div>
-        <div className="absolute top-0 hidden md:block w-screen">
-          <Image src={landing} alt="" layout="" />
+        <div className="absolute top-0 hidden h-screen opacity-25  md:block w-screen">
+          <Image src={landing} alt="" layout="fill" className="" />
         </div>
         <div className="absolute top-0 md:hidden bg-green">
-          <Image src={landingMb} alt="" layout=""  className="opacity-30"/>
+          <Image src={landingMb} alt="" layout="" className="opacity-30" />
         </div>
       </header>
 
-      
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-        
         <Image src={cert} alt="" />
         <button onClick={handleCloseModal} className="btn mt-4">
-          Close 
+          Close
         </button>
       </Modal>
 
-      <div onClick={handleOpenModal} className="bg-green mx-auto px-5 pt-5">
+      <div onClick={handleOpenModal} className="bg-green mx-auto px-5 pt-5  md:pt-20 md:px-[30%]">
         <Image src={cert} alt="" />
       </div>
-     
-        <Testimonial />
+
+      <Testimonial />
 
       <section id="services" className=" bg-green py-20">
         <div>
@@ -175,8 +169,8 @@ export default function Home() {
               </div>
             </div>
             <div className="font-inter md:w-2/3">
-            B&apos;PIPS stands for Blue Pips ( And the color blue in the financial
-              market indicates PROFIT ). <br />
+              B&apos;PIPS stands for Blue Pips ( And the color blue in the
+              financial market indicates PROFIT ). <br />
               <br />
               We are a team of diversed professional traders ( years of
               experience ) that have scaled through so many hurdles in the

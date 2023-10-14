@@ -1,5 +1,5 @@
 import Subline from "@/components/icons/Subline";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import stars from "../../../../public/stars.png";
 import Image from "next/image";
 import red from "../../../../public/big-red.png";
@@ -45,11 +45,46 @@ const testimonials = [
   },
 ];
 
+
+const Modal = ({ isOpen, imageUrl, reset }:any) => {
+  const [open,setOpen] = useState(false)
+  useEffect(() => {
+    setOpen(reset)
+  } ,[reset])
+  if (!isOpen) return null;
+  
+  const handleClose = () => {
+    setOpen(x => !x)
+    console.log(open)
+  }
+
+  return (
+    <div onClick={() => handleClose()} className={`fixed bg-[#000] bg-opacity-30 inset-0  ${ open ? "flex" : "hidden" } justify-center items-center z-50`}>
+    <div className="modal-overlay" onClick={() => handleClose()}></div>
+    <div className="modal-content bg-white p-6 rounded shadow-lg">
+      <span
+        className="modal-close absolute top-0 right-0 cursor-pointer text-3xl"
+        onClick={() => handleClose()}
+      >
+        &times;
+      </span>
+      <Image src={imageUrl} alt="Screenshot" className="w-full" />
+    </div>
+  </div>
+  );
+};
+
+
+
 const Testimonial = () => {
+  const [index,setIndex] = useState(0)
+  const [screenshot,setScreenshot] = useState("")
   const [openIndex, setOpenIndex] = useState(null);
   // const [open, isOpen] = useState(false)
 
-  const handleClick = (index:any) => {
+  const handleClick = (index:any, screenshot:any) => {
+    setIndex(index)
+    setScreenshot(screenshot)
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
@@ -71,24 +106,57 @@ const Testimonial = () => {
         </div> */}
       </div>
 
+      {/* DSKTP */}
+
+      <div className="hidden  md:flex justify-center mt-5 gap-5 md:flex-row flex-col md:px-0 px-5 items-center">
+        <Marquee speed={15} >
+          {/* <Modal isOpen={openIndex === index} imageUrl={x.screenshot} /> */}
+        {testimonials.map((x, index) => (
+          <div
+            onClick={() => handleClick(index,x.screenshot)}
+            
+            key={x.id}
+          >
+            <div className="w-auto md:w-[600px] h-[400px] border-white border border-opacity-60 flex gap-5 py-5 md:p-10 px-4 flex-row md:flex-col-reverse md:items-center md:justify-around">
+              <div className="w-2/3 flex flex-col items-center">
+                <div className=" h-[50px] w-[60px]  md:w-[80px] md:h-auto">
+                  <Image src={x.img} alt="" layout="fit"/>
+                </div>
+                <div className="text-white text-opacity-70 leading-[20px] text-sm text-center md:text-xl mt-3">
+                  {x.name}
+                </div>
+              </div>
+              <div className="md:text-center text-start text-white text-opacity-70 md:text-lg text-xs  mt-3">
+                {x.body}
+              </div>
+            </div>
+            {/* <div className={`${openIndex === index ? "block" : "hidden"}`}>
+              <Image src={x.screenshot} alt="" />
+            </div> */}
+          </div>
+        ))}
+        </Marquee>
+      </div>
+        <Modal isOpen={openIndex === index} imageUrl={screenshot} reset={true}/>
       {/* MOBILE */}
-      <div className="md:hidde flex justify-center mt-5 gap-5 md:flex-row flex-col md:px-0 px-5 items-center">
+
+      <div className="md:hidden flex justify-center mt-5 gap-5 md:flex-row flex-col md:px-0 px-5 items-center">
         {testimonials.map((x, index) => (
           <div
             onClick={() => handleClick(index)}
             
             key={x.id}
           >
-            <div className="w-auto md:w-[400px] border-white border border-opacity-60 flex gap-5 py-5 px-4 flex-row">
+            <div className="w-auto md:w-[600px]  border-white border border-opacity-60 flex gap-5 py-5 md:p-10 px-4 flex-row md:flex-col-reverse md:items-center">
               <div className="w-2/3 flex flex-col items-center">
-                <div className=" h-[50px] w-[50px]">
-                  <Image src={x.img} alt="" />
+                <div className=" h-[50px] w-[50px]  md:w-auto md:wh-auto">
+                  <Image src={x.img} alt="" layout=""/>
                 </div>
-                <div className="text-white text-opacity-70 leading-[20px] text-sm text-center mt-3">
+                <div className="text-white text-opacity-70 leading-[20px] text-sm text-center md:text-xl mt-3">
                   {x.name}
                 </div>
               </div>
-              <div className="text-start text-white text-opacity-70 text-xs  mt-3">
+              <div className="md:text-center text-start text-white text-opacity-70 md:text-lg text-xs  mt-3">
                 {x.body}
               </div>
             </div>
