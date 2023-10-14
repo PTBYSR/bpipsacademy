@@ -18,7 +18,8 @@ import boot from "../../public/boot-xs.jpg";
 import BlogCard from "@/components/common/BlogCard/BlogCard";
 import Banner from "@/components/common/Banner/Banner";
 import Marquee from "react-fast-marquee";
-
+import cert from '../../public/cert.png'
+import React, {useState} from "react";
 const items = [
   {
     id: 1,
@@ -47,7 +48,36 @@ const items = [
   },
 ];
 
+
+
+const Modal = ({ isOpen, onClose, children }:any) => {
+  return (
+    <div
+      className={`bg-[#000] bg-opacity-30 fixed inset-0 flex items-center justify-center z-50 ${
+        isOpen ? '' : 'hidden'
+      }`}
+    >
+      <div className="modal-overlay" onClick={onClose}></div>
+      <div className="modal-container bg-white mx-1 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+        <div className="modal-content py-4 text-left px-6">{children}</div>
+      </div>
+    </div>
+  );
+};
+
+
 export default function Home() {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <Main
       meta={
@@ -92,6 +122,19 @@ export default function Home() {
           <Image src={landingMb} alt="" layout=""  className="opacity-30"/>
         </div>
       </header>
+
+      
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+        
+        <Image src={cert} alt="" />
+        <button onClick={handleCloseModal} className="btn mt-4">
+          Close 
+        </button>
+      </Modal>
+
+      <div onClick={handleOpenModal} className="bg-green mx-auto px-5 pt-5">
+        <Image src={cert} alt="" />
+      </div>
      
         <Testimonial />
 

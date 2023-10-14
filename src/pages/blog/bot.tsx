@@ -28,7 +28,11 @@ const blogContent = [
     id: 4,
     title: "What are the bot packages you offer",
     description:
-      "Half license - N600,000 This gives you access to trading just one funded account using the bot without you obtaining it, in other words you send us the logins to your funded account and we'll connect it to the bot till infinity",
+      `Half license - N600,000 This gives you access to trading just one funded account using the bot without you obtaining it, in other words you send us the logins to your funded account and we'll connect it to the bot till infinity. The Full License is sold for N1m
+      The bot is given to you as a full license. In other words it’s yours to keep and you can;
+      >Sell to other users as full license for your own price. 
+      >Connect people’s trading account to the bot as half license for your price. 
+      >Use it to pass multiple prop firm accounts and manage people’s funded account. `,
   },
   {
     id: 5,
@@ -49,7 +53,7 @@ const blogContent = [
     id: 8,
     title: "What is the accuracy of the bot",
     description:
-      "The bot has gone through a 5 month backtesting phase and the results were 98% a accurate",
+      "The bot has gone through a 5 month backtesting phase and the results were 98% accurate",
   },
 ];
 

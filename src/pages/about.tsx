@@ -34,8 +34,7 @@ const About = () => {
               B&apos;PIPS stands for Blue Pips ( And the color blue in the financial
               market indicates PROFIT ). <br />
               <br />
-              We are a team of diversed professional traders ( years of
-              experience ) that have scaled through so many hurdles in the
+              We are a team of diversed professional traders that have scaled through so many hurdles in the
               financial market and finally resolved to establishing a medium to
               empower and sustain youngsters and anyone ready to take their
               financial position to the next level by teaching them the skill

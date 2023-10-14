@@ -36,38 +36,28 @@ const Services = () => {
           <div className="mt-10">
             <div>
               <div className="text-white text-xl md:text-3xl font-prompt uppercase font-bold leading-[30px] md:leading-[60px]">
-                - Mentorship
+                - Mentorship Packages
               </div>
               <div className="md:pl-10 font-inter text-white md:w-2/3 mt-2 md:mt-4 mb-10">
-                The image below is a brief description on what the Investment
-                plans entails.{" "}
+                Below are the different packages we offer under the Mentorship program.{" "}
                 <Link href="" className="underline">
-                  To learn more contact your account manager here.
+                  To learn more contact a b&apos;pips instructor here.
                 </Link>
               </div>
               <div className="md:pl-10">
                 {/* <Image src={invest} alt="" /> */}
               </div>
             </div>
-            <div className="mt-20">
-              <div className="text-white text-xl md:text-3xl font-prompt uppercase font-bold leading-[30px] md:leading-[60px]">
-                - Prop firm services
-              </div>
-              <div className="md:pl-10 font-inter text-white md:w-2/3 mt-2 md:mt-4 mb-10">
-                Below is a brief description on what the Prop firm services
-                entails.{" "}
-                <Link href="" className="underline">
-                  To learn more contact your account manager here.
-                </Link>
-              </div>
-              <div className="md:pl-10">
+          </div>
+          <div>
+          <div className="md:pl-10">
                 <div className="container mx-auto my-10">
                   <table className="min-w-full bg-white border border-gray-300">
                     <thead>
                       <tr>
-                        <th className="py-5 px-4 border-b">Account Type</th>
+                        <th className="py-5 px-4 border-b">Packages</th>
                         <th className="py-5 px-4 border-b">
-                          Initial Investment
+                        Price
                         </th>
                         <th className="py-5 px-4 border-b">Duration</th>
                       </tr>
@@ -76,32 +66,31 @@ const Services = () => {
                       <tr>
                         <td className="py-5 px-4 border-b">
                           {" "}
-                          $5k prop firm acct
+                          Mentorship
                         </td>
-                        <td className="py-5 px-4 border-b"> $5,000</td>
-                        <td className="py-5 px-4 border-b"> 2 months</td>
-                      </tr>
-                      <tr>
-                        <td className="py-5 px-4 border-b">
-                          {" "}
-                          $10k prop firm acct
-                        </td>
-                        <td className="py-5 px-4 border-b"> $10,000</td>
-                        <td className="py-5 px-4 border-b"> 2 months</td>
-                      </tr>
-                      <tr>
-                        <td className="py-5 px-4 border-b">
-                          {" "}
-                          $25k prop firm acct
-                        </td>
-                        <td className="py-5 px-4 border-b"> $25,000</td>
+                        <td className="py-5 px-4 border-b"> ₦100,000</td>
                         <td className="py-5 px-4 border-b"> 3 months</td>
+                      </tr>
+                      <tr>
+                        <td className="py-5 px-4 border-b">
+                          {" "}
+                          Physical classes
+                        </td>
+                        <td className="py-5 px-4 border-b"> ₦20,000</td>
+                        <td className="py-5 px-4 border-b"> 1 month</td>
+                      </tr>
+                      <tr>
+                        <td className="py-5 px-4 border-b">
+                          {" "}
+                          VIP signals
+                        </td>
+                        <td className="py-5 px-4 border-b"> ₦30,000</td>
+                        <td className="py-5 px-4 border-b"> 1 month</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>

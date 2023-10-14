@@ -42,7 +42,9 @@ const Footer = () => {
             {
               socials.map((x, index) => (
 
-                <li key={x.id} className="text-white w-[25px] flex gap-2 items-center text-opacity-70"><Image src={x.img} alt="" /> <div className=" font-inter">{x.title}</div></li>
+                <Link key={x.id} href={x.href} target="__blank">
+                  <li  className="text-white w-[25px] flex gap-2 items-center text-opacity-70"><Image src={x.img} alt="" /> <div className=" font-inter">{x.title}</div></li>
+                </Link>
               ))
             }
           </ul>
@@ -50,9 +52,8 @@ const Footer = () => {
         <div>
           <div className="text-white text-xl font-prompt  uppercase font-bold">Contact us</div>
           <ul className="mt-5 flex flex-col gap-3">
-            <li className="text-white w-[30px] flex gap-2 items-center text-opacity-70">07066499537</li>
-            <li className="text-white w-[30px] flex gap-2 items-center text-opacity-70">07066499537</li>
-            <li className="text-white w-[30px] flex gap-2 items-center text-opacity-70">bpips@forex.com</li>
+            <li className="text-white w-[30px] flex gap-2 items-center text-opacity-70"> 08139699860</li>
+            <li className="text-white w-[30px] flex gap-2 items-center text-opacity-70">bpipsacademy@gmail.com</li>
           </ul>
         </div>
         <div>

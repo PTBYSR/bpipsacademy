@@ -1,5 +1,5 @@
 import Subline from "@/components/icons/Subline";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import stars from "../../../../public/stars.png";
 import Image from "next/image";
 import red from "../../../../public/big-red.png";
@@ -46,12 +46,12 @@ const testimonials = [
 ];
 
 const Testimonial = () => {
-const [open, isOpen] = useState(false)
+  const [openIndex, setOpenIndex] = useState(null);
+  // const [open, isOpen] = useState(false)
 
-
-const handleClick = () => {
-  isOpen(!open)
-}
+  const handleClick = (index:any) => {
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
 
   return (
     <div className="bg-green py-20 md:py-40 relative">
@@ -73,8 +73,12 @@ const handleClick = () => {
 
       {/* MOBILE */}
       <div className="md:hidde flex justify-center mt-5 gap-5 md:flex-row flex-col md:px-0 px-5 items-center">
-        {testimonials.map((x) => (
-          <div onClick={handleClick}  className="flex flex-col" key={x.id}>
+        {testimonials.map((x, index) => (
+          <div
+            onClick={() => handleClick(index)}
+            
+            key={x.id}
+          >
             <div className="w-auto md:w-[400px] border-white border border-opacity-60 flex gap-5 py-5 px-4 flex-row">
               <div className="w-2/3 flex flex-col items-center">
                 <div className=" h-[50px] w-[50px]">
@@ -88,9 +92,8 @@ const handleClick = () => {
                 {x.body}
               </div>
             </div>
-            <div className={`${open ? " block" : "hidden"}`}>
-
-            <Image src={x.screenshot} alt="" />
+            <div className={`${openIndex === index ? "block" : "hidden"}`}>
+              <Image src={x.screenshot} alt="" />
             </div>
           </div>
         ))}
