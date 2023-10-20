@@ -88,7 +88,7 @@ const Join = () => {
             type="lastName"
             id="lastName"
             name="lastName"
-            value={formData.firstName}
+            value={formData.lastName}
             onChange={handleChange}
           />
         </div>
