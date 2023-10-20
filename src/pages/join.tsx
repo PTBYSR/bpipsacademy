@@ -2,6 +2,9 @@ import { Meta } from "@/layouts/Meta";
 import { Main } from "@/templates/Main";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import { useFormspark } from "@formspark/use-formspark";
+
+const FORMSPARK_FORM_ID = "pIoXuVS0";
 
 const Join = () => {
   const router = useRouter();
@@ -14,6 +17,10 @@ const Join = () => {
     lastName: "",
   });
 
+  const [submit, submitting] = useFormspark({
+    formId: FORMSPARK_FORM_ID,
+  });
+
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({
@@ -22,7 +29,7 @@ const Join = () => {
     });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     console.log(formData.firstName);
     console.log([
@@ -42,6 +49,7 @@ const Join = () => {
     }
     // Handle form submission here (e.g., send data to the server)
     console.log("Form Data:", formData);
+    await submit({ formData })
     setSuccess(true);
     router.push("https://wa.link/ev12sx");
     setTimeout(() => {
@@ -74,7 +82,7 @@ const Join = () => {
       <form className="w-full px-5">
         <div className="flex md:gap-4 md:flex-row flex-col w-full">
           <label className="text-lg font-semibold mb-2">First Name</label>
-          
+
           <input
             className="w-full border flex border-gray border-opacity-30 py-4 px-3 bg-white mb-4"
             placeholder="First Name"
@@ -109,7 +117,7 @@ const Join = () => {
           />
         </div>
         <div>
-        <label className="text-lg font-semibold mb-2">Phone number</label>
+          <label className="text-lg font-semibold mb-2">Phone number</label>
           <input
             placeholder="Phone Number"
             className="w-full border flex border-gray border-opacity-30 py-4 px-3 bg-white mb-4"
@@ -126,7 +134,7 @@ const Join = () => {
             onClick={handleSubmit}
             type="submit"
           >
-           Submit
+            Submit
           </button>
         </div>
       </form>
