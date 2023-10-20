@@ -73,6 +73,8 @@ const Join = () => {
 
       <form className="w-full px-5">
         <div className="flex md:gap-4 md:flex-row flex-col w-full">
+          <label className="text-lg font-semibold mb-2">First Name</label>
+          
           <input
             className="w-full border flex border-gray border-opacity-30 py-4 px-3 bg-white mb-4"
             placeholder="First Name"
@@ -82,6 +84,7 @@ const Join = () => {
             value={formData.firstName}
             onChange={handleChange}
           />
+          <label className="text-lg font-semibold mb-2">Last Name</label>
           <input
             className="w-full border flex border-gray border-opacity-30 py-4 px-3 bg-white mb-4"
             placeholder="Last Name"
@@ -94,6 +97,7 @@ const Join = () => {
         </div>
 
         <div>
+          <label className="text-lg font-semibold mb-2">Email</label>
           <input
             placeholder="Email"
             className="w-full border flex border-gray border-opacity-30 py-4 px-3 bg-white mb-4"
@@ -105,6 +109,7 @@ const Join = () => {
           />
         </div>
         <div>
+        <label className="text-lg font-semibold mb-2">Phone number</label>
           <input
             placeholder="Phone Number"
             className="w-full border flex border-gray border-opacity-30 py-4 px-3 bg-white mb-4"
