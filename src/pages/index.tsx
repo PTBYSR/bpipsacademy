@@ -104,7 +104,7 @@ export default function Home() {
         />
       }
     >
-      {!isPopUp ? (
+      {/* {!isPopUp ? (
         <></>
       ) : (
         <>
@@ -129,7 +129,6 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="my-5 flex justify-center items-center">
-                  {/* <Button>Get it</Button> */}
                   <button className="bg-red py-5 px-5 w-[200px] uppercase text-white font-prompt text-xl font-bold">
                     Get it
                   </button>
@@ -137,7 +136,7 @@ export default function Home() {
               </div>
             </div>
         </>
-      )}
+      )} */}
 
       <header className=" px-5 bg-green h-[800px] flex flex-col justify-center items-center gap-10 relative overflow-hidden">
         {/* <div className=" z-[100] absolute left-0 -bottom-[210px]"><Image src={money} alt=""/></div> */}
