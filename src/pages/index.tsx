@@ -19,7 +19,7 @@ import BlogCard from "@/components/common/BlogCard/BlogCard";
 import Banner from "@/components/common/Banner/Banner";
 import Marquee from "react-fast-marquee";
 import cert from "../../public/cert.png";
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 const items = [
   {
     id: 1,
@@ -64,15 +64,13 @@ const Modal = ({ isOpen, onClose, children }: any) => {
 };
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-
+  const [isPopUp, setPopUp] = useState(false);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-
-  const timer = setTimeout(() => {
-    setIsLoading(false);
-  }, 5000);
+  // const timer = setTimeout(() => {
+  //   setPopUp(false);
+  // }, 5000);
   const handleOpenModal = () => {
     setIsModalOpen(true);
   };
@@ -80,6 +78,14 @@ export default function Home() {
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setPopUp(true);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <Main
@@ -90,23 +96,41 @@ export default function Home() {
         />
       }
     >
-      <div className="absolute bg-dark bg-opacity-25 z-[100000] w-screen h-screen top-0 px-4 py-10 flex justify-center items-center">
-<div className=" h-[500px] w-full bg-white p-5 border-violet border-4 flex flex-col justify-center items-center">
-<div className="text-center uppercase font-prompt text-xl font-bold">
-  Introduction to
-</div>
-<div className="text-center uppercase font-prompt text-3xl leading-[40px] text-red font-bold">
-ny session strategy
-</div>
-<div className="h-1 w-full bg-dark mb-5 mt-10"></div>
-<div className="text-dark text-semibold text-center italic">Free E-book: The <span className="text-lg font-bold text-lime">Forex Trading Strategy</span> I use to make at least <span className="text-lg font-bold italic text-lime">$1000/month.</span></div>
-<div className="my-5 flex justify-center items-center">
-  {/* <Button>Get it</Button> */}
-  <button className="bg-red py-5 px-5 w-[200px] uppercase text-white font-prompt text-xl font-bold">Get it</button>
-</div>
-</div>
-        
-      </div>
+      {!isPopUp ? (
+        <></>
+      ) : (
+        <>
+          <div className="absolute bg-dark bg-opacity-25 z-[100000] w-screen h-screen top-0 px-4 py-10 flex justify-center items-center">
+            <div className=" h-[500px] w-full bg-white p-5 border-violet border-4 flex flex-col justify-center items-center relative">
+            <div className="absolute top-[5px] right-[12px] z-[1000000]" onClick={() => setPopUp(false)}>close</div>
+              <div className="text-center uppercase font-prompt text-xl font-bold">
+                Introduction to
+              </div>
+              <div className="text-center uppercase font-prompt text-3xl leading-[40px] text-red font-bold">
+                ny session strategy
+              </div>
+              <div className="h-1 w-full bg-dark mb-5 mt-10"></div>
+              <div className="text-dark text-semibold text-center italic">
+                Free E-book: The{" "}
+                <span className="text-lg font-bold text-lime">
+                  Forex Trading Strategy
+                </span>{" "}
+                I use to make at least{" "}
+                <span className="text-lg font-bold italic text-lime">
+                  $1000/month.
+                </span>
+              </div>
+              <div className="my-5 flex justify-center items-center">
+                {/* <Button>Get it</Button> */}
+                <button className="bg-red py-5 px-5 w-[200px] uppercase text-white font-prompt text-xl font-bold">
+                  Get it
+                </button>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+
       <header className=" px-5 bg-green h-[800px] flex flex-col justify-center items-center gap-10 relative overflow-hidden">
         {/* <div className=" z-[100] absolute left-0 -bottom-[210px]"><Image src={money} alt=""/></div> */}
         <div className=" z-[10] absolute left-0 top-0">
@@ -150,13 +174,15 @@ ny session strategy
         </button>
       </Modal>
 
-      <div onClick={handleOpenModal} className="bg-green mx-auto px-5 pt-5  md:pt-20 md:px-[30%]">
+      <div
+        onClick={handleOpenModal}
+        className="bg-green mx-auto px-5 pt-5  md:pt-20 md:px-[30%]"
+      >
         <Image src={cert} alt="" />
       </div>
 
       <Testimonial />
-      
-      
+
       <section id="services" className=" bg-green py-20">
         <div>
           <div className="text-white font-inter uppercase text-xs text-center opacity-90">
