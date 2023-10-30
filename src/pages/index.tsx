@@ -110,7 +110,7 @@ export default function Home() {
         <>
             <div className="absolute bg-dark bg-opacity-25 z-[100000] w-screen h-screen top-0 px-4 py-10 flex justify-center items-center ">
               <div className=" h-[500px] w-full bg-white p-5 border-violet border-4 flex flex-col justify-center items-center relative">
-              <div className="absolute top-[5px] right-[12px] z-[1000000]" onClick={() => setPopUp(false)}>close</div>
+              <div className="absolute top-[5px] right-[12px] z-[1000000] uppercase text-[10px] font-bold" onClick={() => setPopUp(false)}>close</div>
                 <div className="text-center uppercase font-prompt text-xl font-bold">
                   Introduction to
                 </div>
