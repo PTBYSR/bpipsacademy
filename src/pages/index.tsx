@@ -87,6 +87,14 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setPopUp(true);
+    }, 15000);
+
+    return () => clearTimeout(timer);
+  });
+
   return (
     <Main
       meta={
