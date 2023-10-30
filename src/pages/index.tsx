@@ -108,34 +108,34 @@ export default function Home() {
         <></>
       ) : (
         <>
-          <div className="absolute bg-dark bg-opacity-25 z-[100000] w-screen h-screen top-0 px-4 py-10 flex justify-center items-center">
-            <div className=" h-[500px] w-full bg-white p-5 border-violet border-4 flex flex-col justify-center items-center relative">
-            <div className="absolute top-[5px] right-[12px] z-[1000000]" onClick={() => setPopUp(false)}>close</div>
-              <div className="text-center uppercase font-prompt text-xl font-bold">
-                Introduction to
-              </div>
-              <div className="text-center uppercase font-prompt text-3xl leading-[40px] text-red font-bold">
-                ny session strategy
-              </div>
-              <div className="h-1 w-full bg-dark mb-5 mt-10"></div>
-              <div className="text-dark text-semibold text-center italic">
-                Free E-book: The{" "}
-                <span className="text-lg font-bold text-lime">
-                  Forex Trading Strategy
-                </span>{" "}
-                I use to make at least{" "}
-                <span className="text-lg font-bold italic text-lime">
-                  $1000/month.
-                </span>
-              </div>
-              <div className="my-5 flex justify-center items-center">
-                {/* <Button>Get it</Button> */}
-                <button className="bg-red py-5 px-5 w-[200px] uppercase text-white font-prompt text-xl font-bold">
-                  Get it
-                </button>
+            <div className="absolute bg-dark bg-opacity-25 z-[100000] w-screen h-screen top-0 px-4 py-10 flex justify-center items-center ">
+              <div className=" h-[500px] w-full bg-white p-5 border-violet border-4 flex flex-col justify-center items-center relative">
+              <div className="absolute top-[5px] right-[12px] z-[1000000]" onClick={() => setPopUp(false)}>close</div>
+                <div className="text-center uppercase font-prompt text-xl font-bold">
+                  Introduction to
+                </div>
+                <div className="text-center uppercase font-prompt text-3xl leading-[40px] text-red font-bold">
+                  ny session strategy
+                </div>
+                <div className="h-1 w-full bg-dark mb-5 mt-10"></div>
+                <div className="text-dark text-semibold text-center italic">
+                  Free E-book: The{" "}
+                  <span className="text-lg font-bold text-lime">
+                    Forex Trading Strategy
+                  </span>{" "}
+                  I use to make at least{" "}
+                  <span className="text-lg font-bold italic text-lime">
+                    $1000/month.
+                  </span>
+                </div>
+                <div className="my-5 flex justify-center items-center">
+                  {/* <Button>Get it</Button> */}
+                  <button className="bg-red py-5 px-5 w-[200px] uppercase text-white font-prompt text-xl font-bold">
+                    Get it
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
         </>
       )}
 
