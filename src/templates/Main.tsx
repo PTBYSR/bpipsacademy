@@ -64,9 +64,11 @@ const Main = (props: IMainProps) => {
                 </div>
               </div>
               <div className="my-5 flex justify-center h-[200px] w-full items-center">
-                <button className="bg-red py-5 px-5 w-[200px] uppercase text-white font-prompt text-xl font-bold">
-                  Get it
-                </button>
+                <Link href="https://bpipsacademy.systeme.io/63097df6" target="_blank">
+                  <button className="bg-red py-5 px-5 w-[200px] uppercase text-white font-prompt text-xl font-bold">
+                    Get it
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
