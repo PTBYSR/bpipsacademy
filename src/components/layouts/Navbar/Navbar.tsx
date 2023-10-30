@@ -44,9 +44,11 @@ const Navbar = () => {
             </li>
           </Link>
         ))}
-        <li className="bg-red text-center py-6 md:border-b-0 border-b text-white border-opacity-75 uppercase text-xs font-semibold tracking-[1px] font-inter">
-          join the hunt
-        </li>
+        <Link href="/join">
+          <li className="bg-red text-center py-6 md:border-b-0 border-b text-white border-opacity-75 uppercase text-xs font-semibold tracking-[1px] font-inter">
+            join the hunt
+          </li>
+        </Link>
       </ul>
 
       <div className="hidden md:flex gap-10 items-center">
