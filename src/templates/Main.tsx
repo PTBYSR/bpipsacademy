@@ -6,6 +6,8 @@ import React, { useState, useEffect } from "react";
 import landing from "../../public/landing.jpg";
 import Button from "@/components/ui/Button/Button";
 import Link from "next/link";
+import { Analytics } from '@vercel/analytics/react';
+
 
 type IMainProps = {
   meta: ReactNode;
@@ -55,7 +57,7 @@ const Main = (props: IMainProps) => {
                 <div className="md:w-2/3 text-dark text-semibold text-center italic">
                   Free E-book: The{" "}
                   <span className="text-lg font-bold text-lime">
-                    Forex Trading Strategy
+                    Forex Trading Stnmmmmnnnnnnategy
                   </span>{" "}
                   I use to make at least{" "}
                   <span className="text-lg font-bold italic text-lime">
