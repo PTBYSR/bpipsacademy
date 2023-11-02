@@ -57,7 +57,7 @@ const Main = (props: IMainProps) => {
                 <div className="md:w-2/3 text-dark text-semibold text-center italic">
                   Free E-book: The{" "}
                   <span className="text-lg font-bold text-lime">
-                    Forex Trading Stnmmmmnnnnnnategy
+                    Forex Trading strategy
                   </span>{" "}
                   I use to make at least{" "}
                   <span className="text-lg font-bold italic text-lime">
