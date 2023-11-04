@@ -19,7 +19,9 @@ import BlogCard from "@/components/common/BlogCard/BlogCard";
 import Banner from "@/components/common/Banner/Banner";
 import Marquee from "react-fast-marquee";
 import cert from "../../public/cert.png";
+import cert2 from "../../public/cert2.png";
 import React, { useState, useEffect } from "react";
+import Subline from "@/components/icons/Subline";
 const items = [
   {
     id: 1,
@@ -67,6 +69,7 @@ export default function Home() {
   const [isPopUp, setPopUp] = useState(false);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModal2Open, setIsModal2Open] = useState(false);
 
   // const timer = setTimeout(() => {
   //   setPopUp(false);
@@ -77,6 +80,13 @@ export default function Home() {
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+  };
+  const handleOpenModal2 = () => {
+    setIsModal2Open(true);
+  };
+
+  const handleCloseModal2 = () => {
+    setIsModal2Open(false);
   };
 
   useEffect(() => {
@@ -180,19 +190,55 @@ export default function Home() {
           Close
         </button>
       </Modal>
+      <Modal isOpen={isModal2Open} onClose={handleCloseModal}>
+        <Image src={cert} alt="" />
+        <button onClick={handleCloseModal2} className="btn mt-4">
+          Close
+        </button>
+      </Modal>
 
+      <div className="bg-green">
+        <div className="text-white font-inter uppercase text-xs text-center opacity-90"></div>
+        {/* <div className="text-center text-white text-4xl md:text-5xl font-prompt uppercase font-bold leading-[70px]">
+          Our<br /> <span className="text-[#b8fff8]">Certifications</span>
+        </div> */}
+        <div className="flex flex-col gap-2 items-center pt-10">
+          <div className="flex items-center gap-2 mb-3">
+            <Subline />
+            <div className="uppercase text-white text-purple font-inter text-xs font-medium tracking-[1.4px]">
+              certifications
+            </div>
+            <Subline />
+          </div>
+          {/* <div className="text-white text-center uppercase text-5xl font-semibold font-prompt leading-[70px] md:leading-[45px]">
+          Words from our students
+        </div> */}
+        </div>
+      </div>
+      <div className="bg-green w-full flex justify-center items-center">
+        <div className="px-5 bg-green md:w-1/2 text-center text-white ">
+          Explore our certificate of registration and certificate of incoporation.
+          We're proud to be officially recognized by the government, ensuring
+          trust and transparency in our operations.
+        </div>
+      </div>
       <div
         onClick={handleOpenModal}
         className="bg-green mx-auto px-5 pt-5  md:pt-20 md:px-[30%]"
       >
         <Image src={cert} alt="" />
       </div>
-
+      <div
+        onClick={handleOpenModal2}
+        className="bg-green mx-auto px-5 pt-5  md:pt-20 md:px-[30%]"
+      >
+        <Image src={cert2} alt="" />
+      </div>
       <Testimonial />
 
-      <section id="services" className=" bg-green py-20">
+      <section id="services" className=" bg-green py-20 px-5">
         <div>
-          <div className="text-white font-inter uppercase text-xs text-center opacity-90">
+          <div className="text-white font-inter uppercase text-xs text-center opacity-90 ">
             What do we offer
           </div>
           <div className="text-center text-white text-4xl md:text-5xl font-prompt uppercase font-bold leading-[70px]">
