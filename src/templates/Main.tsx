@@ -25,13 +25,13 @@ const Main = (props: IMainProps) => {
     return () => clearTimeout(timer);
   }, []);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setPopUp(true);
-  //   }, 15000);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setPopUp(true);
+    }, 20000);
 
-  //   return () => clearTimeout(timer);
-  // });
+    return () => clearTimeout(timer);
+  });
   return (
     <div className="overflow-hidden relative">
       {!isPopUp ? (

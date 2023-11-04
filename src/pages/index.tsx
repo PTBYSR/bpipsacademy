@@ -218,7 +218,7 @@ export default function Home() {
       <div className="bg-green w-full flex justify-center items-center">
         <div className="px-5 bg-green md:w-1/2 text-center text-white ">
           Explore our certificate of registration and certificate of incoporation.
-          We're proud to be officially recognized by the government, ensuring
+          We&apos;re proud to be officially recognized by the government, ensuring
           trust and transparency in our operations.
         </div>
       </div>
