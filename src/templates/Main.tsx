@@ -17,21 +17,21 @@ type IMainProps = {
 const Main = (props: IMainProps) => {
   const [isPopUp, setPopUp] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setPopUp(true);
-    }, 5000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setPopUp(true);
+  //   }, 5000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setPopUp(true);
-    }, 20000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setPopUp(true);
+  //   }, 20000);
 
-    return () => clearTimeout(timer);
-  });
+  //   return () => clearTimeout(timer);
+  // });
   return (
     <div className="overflow-hidden relative">
       {!isPopUp ? (

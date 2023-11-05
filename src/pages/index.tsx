@@ -20,8 +20,10 @@ import Banner from "@/components/common/Banner/Banner";
 import Marquee from "react-fast-marquee";
 import cert from "../../public/cert.png";
 import cert2 from "../../public/cert2.png";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Subline from "@/components/icons/Subline";
+import { motion, useAnimation } from "framer-motion";
+
 const items = [
   {
     id: 1,
@@ -71,6 +73,20 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModal2Open, setIsModal2Open] = useState(false);
 
+  // FRAMER MOTION
+
+  const divRef = useRef(null);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    // Define the animation sequence
+    controls.start({
+      x: 0, // End position (0 means no change)
+      opacity: 1, // Fully visible
+      transition: { duration: 0.8 }, // Animation duration
+    });
+  }, [controls]);
+
   // const timer = setTimeout(() => {
   //   setPopUp(false);
   // }, 5000);
@@ -89,21 +105,21 @@ export default function Home() {
     setIsModal2Open(false);
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setPopUp(true);
-    }, 5000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setPopUp(true);
+  //   }, 5000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setPopUp(true);
-    }, 15000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setPopUp(true);
+  //   }, 15000);
 
-    return () => clearTimeout(timer);
-  });
+  //   return () => clearTimeout(timer);
+  // });
 
   return (
     <Main
@@ -161,10 +177,15 @@ export default function Home() {
             <div className="text-white font-inter uppercase text-xs text-center opacity-90">
               B&apos;pips Forex Academy
             </div>
-            <h1 className="text-center text-white text-4xl md:text-6xl font-prompt uppercase font-bold leading-[60px] md:leading-[80px]">
+            <motion.h1
+              ref={divRef}
+              initial={{ x: -100, opacity: 0 }}
+              animate={controls}
+              className="text-center text-white text-4xl md:text-6xl font-prompt uppercase font-bold leading-[60px] md:leading-[80px]"
+            >
               Join the hunt <br />
               with the beasts
-            </h1>
+            </motion.h1>
           </div>
           <p className="z-[10000] text-white opacity-90 text-center md:w-1/2 ">
             We&apos;re a diverse team of experienced traders empowering
@@ -217,17 +238,17 @@ export default function Home() {
       </div>
       <div className="bg-green w-full flex justify-center items-center">
         <div className="px-5 bg-green md:w-1/2 text-center text-white ">
-          Explore our certificate of registration and certificate of incoporation.
-          We&apos;re proud to be officially recognized by the government, ensuring
-          trust and transparency in our operations.
+          Explore our certificate of
+          incoporation. We&apos;re proud to be officially recognized by the
+          government, ensuring trust and transparency in our operations.
         </div>
       </div>
-      <div
+      {/* <div
         onClick={handleOpenModal}
         className="bg-green mx-auto px-5 pt-5  md:pt-20 md:px-[30%]"
       >
         <Image src={cert} alt="" />
-      </div>
+      </div> */}
       <div
         onClick={handleOpenModal2}
         className="bg-green mx-auto px-5 pt-5  md:pt-20 md:px-[30%]"
