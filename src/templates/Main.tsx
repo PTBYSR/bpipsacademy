@@ -6,8 +6,7 @@ import React, { useState, useEffect } from "react";
 import landing from "../../public/landing.jpg";
 import Button from "@/components/ui/Button/Button";
 import Link from "next/link";
-import { Analytics } from '@vercel/analytics/react';
-
+import { Analytics } from "@vercel/analytics/react";
 
 type IMainProps = {
   meta: ReactNode;
@@ -66,7 +65,10 @@ const Main = (props: IMainProps) => {
                 </div>
               </div>
               <div className="my-5 flex justify-center h-[200px] w-full items-center">
-                <Link href="https://bpipsacademy.systeme.io/63097df6" target="_blank">
+                <Link
+                  href="https://bpipsacademy.systeme.io/63097df6"
+                  target="_blank"
+                >
                   <button className="bg-red py-5 px-5 w-[200px] uppercase text-white font-prompt text-xl font-bold">
                     Get it
                   </button>
@@ -76,19 +78,19 @@ const Main = (props: IMainProps) => {
           </div>
         </>
       )}
-
-      <div className="flex justify-center bg-red w-full font-semibold text-white py-2 uppercase text-xs">
-        metro trading bot{" "}
-        <Link href="/blog/bot">
-          <span className="underline font-bold ml-2 "> learn more</span>
-        </Link>{" "}
+      <div className="fixed z-[1000] w-full top-[0px]">
+        <div className="flex z-[100000] justify-center bg-red w-full font-semibold text-white py-2 uppercase text-xs">
+          metro trading bot{" "}
+          <Link href="/blog/bot">
+            <span className="underline font-bold ml-2 "> learn more</span>
+          </Link>{" "}
+        </div>
+        <Navbar />
       </div>
-      <Navbar />
       {props.meta}
-      <main className="">{props.children}</main>
+      <main className="mt-[90px] ">{props.children}</main>
       <Footer />
     </div>
   );
 };
 export { Main };
- 
