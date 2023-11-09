@@ -127,8 +127,8 @@ export default function Home() {
     <Main
       meta={
         <Meta
-          title="Laguru Health Club - Welcome"
-          description="1# Abuja Wellness Center"
+          title="Bpips Forex Academy"
+          description="Join the hunt with the beasts"
         />
       }
     >
