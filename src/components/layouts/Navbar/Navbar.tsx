@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect, useRef } from "react";
 import logo from "../../../../public/logo.png";
 import Image from "next/image";
 import { navLinks } from "./Navlinks";
@@ -7,9 +7,23 @@ import clsx from "clsx";
 import Link from "next/link";
 import Button from "@/components/ui/Button/Button";
 import { Cross as Hamburger } from "hamburger-react";
+import { motion, useAnimation } from "framer-motion";
+
 
 const Navbar = () => {
   const [open, isOpen] = useState(false);
+
+  const subRef = useRef(null);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    // Define the animation sequence
+    controls.start({
+      x: 0, // End position (0 means no change)
+      opacity: 1, // Fully visible
+      transition: { duration: 0.8 }, // Animation duration
+    });
+  }, [controls]);
 
   const toggleMenu = () => {
     isOpen(!open);
@@ -17,16 +31,25 @@ const Navbar = () => {
   return (
     <nav className=" md:px-10 z-[10000] relative bg-white h-[70px] md:h-[90px] flex items-center justify-between">
       <Link href="/">
-        <div className="pl-5">
+        <motion.div 
+        
+        ref={subRef}
+          initial={{ x: -100, opacity: 0 }}
+          animate={controls}
+        className="pl-5">
           <Image src={logo} alt="" />
-        </div>
+        </motion.div>
       </Link>
 
       {/* <Hamburger fill="#2C2D48" w="10"/> */}
 
-      <div className="pr-5 md:hidden">
+      <motion.div 
+      ref={subRef}
+      initial={{ x: 100, opacity: 0 }}
+      animate={controls}
+      className="pr-5 md:hidden">
         <Hamburger toggle={isOpen} toggled={open} />
-      </div>
+      </motion.div>
 
       <ul
         className={clsx(

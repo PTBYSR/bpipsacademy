@@ -76,6 +76,8 @@ export default function Home() {
   // FRAMER MOTION
 
   const divRef = useRef(null);
+  const subRef = useRef(null);
+  const btnRef = useRef(null);
   const controls = useAnimation();
 
   useEffect(() => {
@@ -174,12 +176,18 @@ export default function Home() {
         </div>
         <div className="flex flex-col justify-center items-center gap-5">
           <div className="z-[100] relative ">
-            <div className="text-white font-inter uppercase text-xs text-center opacity-90">
+            <motion.div 
+            
+            
+            ref={subRef}
+          initial={{ x: -100, opacity: 0 }}
+          animate={controls}
+            className="text-white font-inter uppercase text-xs text-center opacity-90">
               B&apos;pips Forex Academy
-            </div>
+            </motion.div>
             <motion.h1
               ref={divRef}
-              initial={{ x: -100, opacity: 0 }}
+              initial={{ x: 100, opacity: 0 }}
               animate={controls}
               className="text-center text-white text-4xl md:text-6xl font-prompt uppercase font-bold leading-[60px] md:leading-[80px]"
             >
@@ -187,16 +195,25 @@ export default function Home() {
               with the beasts
             </motion.h1>
           </div>
-          <p className="z-[10000] text-white opacity-90 text-center md:w-1/2 ">
+          <motion.p
+          ref={subRef}
+          initial={{ x: -100, opacity: 0 }}
+          animate={controls}
+          className="z-[10000] text-white opacity-90 text-center md:w-1/2 ">
             We&apos;re a diverse team of experienced traders empowering
             individuals, especially the youth, to boost their financial
             standing. We provide essential skills, tools, ongoing support, and
             monitor progress for lasting growth in the financial market.
-          </p>
+          </motion.p>
         </div>
-        <div className="relative z-[10]">
+        <motion.div
+        
+        ref={subRef}
+          initial={{ x: 100, opacity: 0 }}
+          animate={controls}
+        className="relative z-[10]">
           <Button>Join the hunt</Button>
-        </div>
+        </motion.div>
         <div className="absolute top-0 hidden h-screen opacity-25  md:block w-screen">
           <Image src={landing} alt="" layout="fill" className="" />
         </div>
