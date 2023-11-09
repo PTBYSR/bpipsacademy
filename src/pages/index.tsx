@@ -237,11 +237,15 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-green w-full flex justify-center items-center">
-        <div className="px-5 bg-green md:w-1/2 text-center text-white ">
+        <motion.div
+         ref={divRef}
+         initial={{ x: -100, opacity: 0 }}
+         animate={controls}
+         className="px-5 bg-green md:w-1/2 text-center text-white ">
           Explore our certificate of
           incoporation. We&apos;re proud to be officially recognized by the
           government, ensuring trust and transparency in our operations.
-        </div>
+        </motion.div>
       </div>
       {/* <div
         onClick={handleOpenModal}
